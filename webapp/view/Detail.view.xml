@@ -6,28 +6,20 @@
 
             <ObjectHeader
 		title="{ContactName}"
-		number="{
-			parts:[{path:'Price'},{path:'CurrencyCode'}],
-			type: 'sap.ui.model.type.Currency',
-			formatOptions: {showMeasure: false}
-		}"
-		numberUnit=""
 		class="sapUiResponsivePadding--header" >
             <statuses>
                 <ObjectStatus
-                    text="Some Damaged"
-                    state="Error" />
-                <ObjectStatus
-                    text="In Stock"
-                    state="Success" />
+                    text="{ContactTitle}"
+                    state="{= ${ContactTitle} === 'Owner' ? 'Success' : 'Error'}" />
             </statuses>
             <ObjectAttribute text="Phone: {Phone}" />
-            <ObjectAttribute text="{ContactTitle}" />
+            <ObjectAttribute text="COMPANY: {CompanyName}" />
+            <ObjectAttribute text="{Country}" />
             <ObjectAttribute text="{Address}, {City}" />
             <ObjectAttribute
-                text="www.sap.com"
+                text="See Orders"
                 active="true"
-                press="handleLinkObjectAttributePress" />
+                press="handleOrdersButton" />
 	</ObjectHeader>
 
         </content>

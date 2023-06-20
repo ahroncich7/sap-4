@@ -26,7 +26,7 @@ sap.ui.define([
   
                 oView.bindElement({
   
-                    path: "Customers('"+ oArgs.customerID + "')",
+                    path: "/Customers('"+oArgs.customerID+"')",
   
                     events: {
   
