@@ -2,6 +2,19 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <List
+		    headerText="{i18n>Customers}"
+		    items="{
+			    path: '/Customers'
+		        }" >
+		        <StandardListItem
+			    title="{ContactName}"
+			    description="Company: {CompanyName}"
+                press="onPress"
+                type="Navigation"
+                />
+	</List>
+        </content>
     </Page>
 </mvc:View>
