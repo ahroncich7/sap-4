@@ -94,10 +94,17 @@
             },
             "routes": [
                 {
-                    "name": "RouteMain",
-                    "pattern": ":?query:",
+                    "name": "Home",
+                    "pattern": "",
                     "target": [
                         "TargetMain"
+                    ]
+                },
+                {
+                    "name": "detail",
+                    "pattern": "detail/{customerID}",
+                    "target": [
+                        "TargetDetail"
                     ]
                 }
             ],
@@ -106,8 +113,16 @@
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
-                    "viewId": "Main",
+                    "viewId": "main",
                     "viewName": "Main"
+                },
+                
+                "TargetDetail": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "detail",
+                    "viewName": "Detail"
                 }
             }
         },
