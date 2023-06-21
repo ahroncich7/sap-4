@@ -47,5 +47,13 @@ sap.ui.define([
                 });
   
             },
+
+            handleOrdersButton: function (oEvent) {
+                var ID = oEvent.getSource().getBindingContext().getProperty("CustomerID")
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.navTo("orders", {
+                    customerID: ID
+                })
+            }
         });
     });

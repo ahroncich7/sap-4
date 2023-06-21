@@ -106,6 +106,13 @@
                     "target": [
                         "TargetDetail"
                     ]
+                },
+                {
+                    "name": "orders",
+                    "pattern": "orders/{customerID}",
+                    "target": [
+                        "TargetOrders"
+                    ]
                 }
             ],
             "targets": {
@@ -123,6 +130,13 @@
                     "clearControlAggregation": false,
                     "viewId": "detail",
                     "viewName": "Detail"
+                },
+                "TargetOrders": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "orders",
+                    "viewName": "Orders"
                 }
             }
         },

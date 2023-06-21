@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns="sap.m" 
+xmlns:core="sap.ui.core"
+xmlns:form="sap.ui.layout.form"
+	xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Dialog id="openDialog">
+	<form:SimpleForm class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="false"
+				labelSpanL="3" labelSpanM="3" layout="ResponsiveGridLayout" title="OrderDetail"
+				width="auto">
+			<form:content>
+				<Label text="{OrderID}" />
+				<Text text="{OrderID}" />
+				<Label text="Dato 1" />
+				<Text text="Dat1" />
+				<Label text="Dato 1" />
+				<Text text="Dat1" />
+				<Label text="Dato 1" />
+				<Text text="Dat1" />
+				<Label text="Dato 1" />
+				<Text text="Dat1" />
+				<Label text="Dato 1" />
+				<Text text="Dat1" />
+			</form:content>
+		</form:SimpleForm>
+	 	<Button 
+			type="Accept"
+			text="Accept"
+			press="onClose"
+		>
+			</Button>
+		</Dialog>
+</core:FragmentDefinition>

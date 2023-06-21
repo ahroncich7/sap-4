@@ -1,0 +1,18 @@
+<mvc:View controllerName="prueba.preexamen.controller.Orders"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="orders" title="{i18n>title}">
+        <List
+		headerText="Orders from {ContactName}"
+		items="{
+			path: '/Orders'
+		}" >
+		<StandardListItem
+			title="Order ID: {OrderID}"
+            description="{OrderDate}"
+			type="Active"
+            press="onOrderDetail"
+            />
+	</List>
+    </Page>
+</mvc:View>
