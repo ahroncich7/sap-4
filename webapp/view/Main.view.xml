@@ -2,9 +2,19 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+     <subHeader>
+        <Bar id="_IDGenBar1">
+				<contentLeft>
+					<SearchField id="_IDGenSearchField1"  liveChange="handleSearch"/>
+				</contentLeft>
+			</Bar>
+
+     </subHeader>
         <content>
+       
             <List
-		    headerText="{i18n>Customers}"
+		    id="list"
+            headerText="{i18n>Customers}"
 		    items="{
 			    path: '/Customers'
 		        }" >
